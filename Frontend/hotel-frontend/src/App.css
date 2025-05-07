@@ -1,0 +1,307 @@
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef); 
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+/* Navbar */
+.fancy-navbar {
+  background: linear-gradient(90deg, #000, #333);
+  border-bottom: 3px solid gold;
+  padding: 1rem 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
+.fancy-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: gold !important;
+  transition: transform 0.3s ease;
+}
+
+.fancy-logo:hover {
+  transform: scale(1.1);
+}
+
+.fancy-link {
+  color: white !important;
+  margin-right: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fancy-link:hover {
+  color: gold !important;
+  transform: scale(1.1);
+}
+
+.fancy-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid gold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.fancy-button:hover {
+  background-color: gold !important;
+  color: black !important;
+  transform: scale(1.1);
+}
+
+/* Carosello */
+.fancy-carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 950px;
+}
+
+.fancy-carousel .fancy-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 2px 2px 5px black;
+}
+
+.fancy-carousel .fancy-text {
+  font-size: 1.2rem;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+.fancy-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.fancy-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.2));
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.fancy-section:hover::before {
+  opacity: 0.5;
+}
+
+.fancy-section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-title {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  z-index: 1;
+  position: relative;
+}
+
+.fancy-text {
+  font-size: 1.2rem;
+  color: #555;
+  z-index: 1;
+  position: relative;
+}
+
+
+#camere {
+  background: url('/images/camere-bg.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+#servizi {
+  background: url('/images/servizi-bg.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.fancy-footer {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.footer-link {
+  color: gold;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+
+button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: gold !important;
+  color: #000 !important;
+}
+
+/* camere */
+.camere-page {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(221, 212, 82, 0.9)), 
+              url('/images/hotel-background.jpg') no-repeat center center/cover;
+  padding: 2rem;
+  min-height: 100vh; 
+}
+
+.camere-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.camera-card {
+  background: rgba(234, 247, 54, 0.521);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+  height: 400px; 
+  position: relative;
+  flex-shrink: 0; 
+}
+
+.camera-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.camera-card.expanded {
+  height: auto; 
+  max-width: 800px;
+  transition: height 0.3s ease, max-width 0.3s ease;
+}
+
+.camera-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.camera-details {
+  padding: 1rem;
+  background: #919c2d;
+  border-top: 1px solid #ddd;
+}
+/* storico */
+
+.storico-page {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(221, 212, 82, 0.9)),
+              url('/images/hotel-background.jpg') no-repeat center center/cover;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.prenotazioni-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.camera-card {
+  background: rgba(234, 247, 54, 0.521);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 300px;
+  height: auto;
+  position: relative;
+}
+
+
+.camera-info button {
+  margin-top: 1rem;
+}
+
+/* Profilo */
+.profilo-page {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(221, 212, 82, 0.9)),
+              url('/images/profile-background.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.profilo-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.profilo-form .form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.profilo-form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.profilo-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.profilo-form button {
+  background: #007bff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.profilo-form button:hover {
+  background: #0056b3;
+}
